@@ -1,0 +1,20 @@
+﻿Clinic
+
+
+winexe
+C#
+.cs
+I:\Work\Midis\Курсовые\Курсовая 2 курс\Clinic\Clinic\obj\Debug\
+Clinic
+none
+false
+DEBUG;TRACE
+I:\Work\Midis\Курсовые\Курсовая 2 курс\Clinic\Clinic\App.xaml
+13-389549739
+5114557009
+46-573643670
+20-136091517
+MainWindow.xaml;Pages\DoctorsPage.xaml;Pages\MenuPage.xaml;Pages\PatientCardsPage.xaml;Templates\DoctorTemplate.xaml;Templates\MenuItemTemplate.xaml;Templates\PatientCardTemplate.xaml;Pages\SchedulePage.xaml;Templates\ScheduleDayTemplate.xaml;Templates\ScheduleItemTemplate.xaml;Templates\SpecialTemplate.xaml;Windows\CardPageWindow.xaml;Windows\DoctorInfoWindow.xaml;
+
+False
+

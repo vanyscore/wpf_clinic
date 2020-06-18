@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ClinicModelStoreContainer" CdmEntityContainer="ClinicModelContainer">
+    <EntitySetMapping Name="Categories">
+      <EntityTypeMapping TypeName="IsTypeOf(ClinicModel.Category)">
+        <MappingFragment StoreEntitySet="Categories">
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Doctors">
+      <EntityTypeMapping TypeName="IsTypeOf(ClinicModel.Doctor)">
+        <MappingFragment StoreEntitySet="Doctors">
+          <ScalarProperty Name="DoctorId" ColumnName="DoctorId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="Patrynum" ColumnName="Patrynum" />
+          <ScalarProperty Name="SpecialId" ColumnName="SpecialId" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="Expirience" ColumnName="Expirience" />
+          <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+          <ScalarProperty Name="Icon" ColumnName="Icon" />
+          <ScalarProperty Name="DoctorTypeId" ColumnName="DoctorTypeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Specials">
+      <EntityTypeMapping TypeName="IsTypeOf(ClinicModel.Special)">
+        <MappingFragment StoreEntitySet="Specials">
+          <ScalarProperty Name="SpecialId" ColumnName="SpecialId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PatientCards">
+      <EntityTypeMapping TypeName="IsTypeOf(ClinicModel.PatientCard)">
+        <MappingFragment StoreEntitySet="PatientCards">
+          <ScalarProperty Name="PatientCardId" ColumnName="PatientCardId" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="Patrynum" ColumnName="Patrynum" />
+          <ScalarProperty Name="AddressId" ColumnName="AddressId" />
+          <ScalarProperty Name="SexId" ColumnName="SexId" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="Icon" ColumnName="Icon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SexSet">
+      <EntityTypeMapping TypeName="IsTypeOf(ClinicModel.Sex)">
+        <MappingFragment StoreEntitySet="SexSet">
+          <ScalarProperty Name="SexId" ColumnName="SexId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CardPages">
+      <EntityTypeMapping TypeName="IsTypeOf(ClinicModel.CardPage)">
+        <MappingFragment StoreEntitySet="CardPages">
+          <ScalarProperty Name="CardPageId" ColumnName="CardPageId" />
+          <ScalarProperty Name="PatientCardId" ColumnName="PatientCardId" />
+          <ScalarProperty Name="PageNumber" ColumnName="PageNumber" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Complaints" ColumnName="Complaints" />
+          <ScalarProperty Name="Diagnosis" ColumnName="Diagnosis" />
+          <ScalarProperty Name="Treatment" ColumnName="Treatment" />
+          <ScalarProperty Name="DoctorId" ColumnName="DoctorId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sites">
+      <EntityTypeMapping TypeName="IsTypeOf(ClinicModel.Site)">
+        <MappingFragment StoreEntitySet="Sites">
+          <ScalarProperty Name="SiteId" ColumnName="SiteId" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SiteAddresses">
+      <EntityTypeMapping TypeName="IsTypeOf(ClinicModel.SiteAddress)">
+        <MappingFragment StoreEntitySet="SiteAddresses">
+          <ScalarProperty Name="SiteAddressId" ColumnName="SiteAddressId" />
+          <ScalarProperty Name="SiteId" ColumnName="SiteId" />
+          <ScalarProperty Name="AddressId" ColumnName="AddressId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AddressSet">
+      <EntityTypeMapping TypeName="IsTypeOf(ClinicModel.Address)">
+        <MappingFragment StoreEntitySet="AddressSet">
+          <ScalarProperty Name="AddressId" ColumnName="AddressId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Surgeries">
+      <EntityTypeMapping TypeName="IsTypeOf(ClinicModel.Surgery)">
+        <MappingFragment StoreEntitySet="Surgeries">
+          <ScalarProperty Name="SurgeryId" ColumnName="SurgeryId" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DistrictSchedules">
+      <EntityTypeMapping TypeName="IsTypeOf(ClinicModel.DistrictSchedule)">
+        <MappingFragment StoreEntitySet="DistrictSchedules">
+          <ScalarProperty Name="DistrictScheduleId" ColumnName="DistrictScheduleId" />
+          <ScalarProperty Name="SurgeryId" ColumnName="SurgeryId" />
+          <ScalarProperty Name="DoctorId" ColumnName="DoctorId" />
+          <ScalarProperty Name="ReceiptDate" ColumnName="ReceiptDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DoctorTypes">
+      <EntityTypeMapping TypeName="IsTypeOf(ClinicModel.DoctorType)">
+        <MappingFragment StoreEntitySet="DoctorTypes">
+          <ScalarProperty Name="DoctorTypeId" ColumnName="DoctorTypeId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SiteDoctors">
+      <EntityTypeMapping TypeName="IsTypeOf(ClinicModel.SiteDoctors)">
+        <MappingFragment StoreEntitySet="SiteDoctors">
+          <ScalarProperty Name="SiteDoctorId" ColumnName="SiteDoctorId" />
+          <ScalarProperty Name="DoctorId" ColumnName="DoctorId" />
+          <ScalarProperty Name="SiteId" ColumnName="SiteId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="DoctorCategory" TypeName="ClinicModel.DoctorCategory" StoreEntitySet="Doctors">
+      <EndProperty Name="Category">
+        <ScalarProperty Name="CategoryId" ColumnName="Category_CategoryId" />
+      </EndProperty>
+      <EndProperty Name="Doctor">
+        <ScalarProperty Name="DoctorId" ColumnName="DoctorId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="DoctorSpecial" TypeName="ClinicModel.DoctorSpecial" StoreEntitySet="Doctors">
+      <EndProperty Name="Special">
+        <ScalarProperty Name="SpecialId" ColumnName="Special_SpecialId" />
+      </EndProperty>
+      <EndProperty Name="Doctor">
+        <ScalarProperty Name="DoctorId" ColumnName="DoctorId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="SexPatientCard" TypeName="ClinicModel.SexPatientCard" StoreEntitySet="PatientCards">
+      <EndProperty Name="Sex">
+        <ScalarProperty Name="SexId" ColumnName="Sex_SexId" />
+      </EndProperty>
+      <EndProperty Name="PatientCard">
+        <ScalarProperty Name="PatientCardId" ColumnName="PatientCardId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="PatientCardCardPage" TypeName="ClinicModel.PatientCardCardPage" StoreEntitySet="CardPages">
+      <EndProperty Name="PatientCard">
+        <ScalarProperty Name="PatientCardId" ColumnName="PatientCard_PatientCardId" />
+      </EndProperty>
+      <EndProperty Name="CardPage">
+        <ScalarProperty Name="CardPageId" ColumnName="CardPageId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="CardPageDoctor" TypeName="ClinicModel.CardPageDoctor" StoreEntitySet="CardPages">
+      <EndProperty Name="Doctor">
+        <ScalarProperty Name="DoctorId" ColumnName="Doctor_DoctorId" />
+      </EndProperty>
+      <EndProperty Name="CardPage">
+        <ScalarProperty Name="CardPageId" ColumnName="CardPageId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="AddressSiteAdresses" TypeName="ClinicModel.AddressSiteAdresses" StoreEntitySet="SiteAddresses">
+      <EndProperty Name="Address">
+        <ScalarProperty Name="AddressId" ColumnName="Address_AddressId" />
+      </EndProperty>
+      <EndProperty Name="SiteAdresses">
+        <ScalarProperty Name="SiteAddressId" ColumnName="SiteAddressId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="SiteSiteAdresses" TypeName="ClinicModel.SiteSiteAdresses" StoreEntitySet="SiteAddresses">
+      <EndProperty Name="Site">
+        <ScalarProperty Name="SiteId" ColumnName="Site_SiteId" />
+      </EndProperty>
+      <EndProperty Name="SiteAdresses">
+        <ScalarProperty Name="SiteAddressId" ColumnName="SiteAddressId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="AddressPatientCard" TypeName="ClinicModel.AddressPatientCard" StoreEntitySet="PatientCards">
+      <EndProperty Name="Address">
+        <ScalarProperty Name="AddressId" ColumnName="Address_AddressId" />
+      </EndProperty>
+      <EndProperty Name="PatientCard">
+        <ScalarProperty Name="PatientCardId" ColumnName="PatientCardId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="SurgeryDistrictSchedule" TypeName="ClinicModel.SurgeryDistrictSchedule" StoreEntitySet="DistrictSchedules">
+      <EndProperty Name="Surgery">
+        <ScalarProperty Name="SurgeryId" ColumnName="Surgery_SurgeryId" />
+      </EndProperty>
+      <EndProperty Name="DistrictSchedule">
+        <ScalarProperty Name="DistrictScheduleId" ColumnName="DistrictScheduleId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="DoctorDistrictSchedule" TypeName="ClinicModel.DoctorDistrictSchedule" StoreEntitySet="DistrictSchedules">
+      <EndProperty Name="Doctor">
+        <ScalarProperty Name="DoctorId" ColumnName="Doctor_DoctorId" />
+      </EndProperty>
+      <EndProperty Name="DistrictSchedule">
+        <ScalarProperty Name="DistrictScheduleId" ColumnName="DistrictScheduleId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="DoctorTypeDoctor" TypeName="ClinicModel.DoctorTypeDoctor" StoreEntitySet="Doctors">
+      <EndProperty Name="DoctorType">
+        <ScalarProperty Name="DoctorTypeId" ColumnName="DoctorType_DoctorTypeId" />
+      </EndProperty>
+      <EndProperty Name="Doctor">
+        <ScalarProperty Name="DoctorId" ColumnName="DoctorId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="DoctorSiteDoctors" TypeName="ClinicModel.DoctorSiteDoctors" StoreEntitySet="SiteDoctors">
+      <EndProperty Name="Doctor">
+        <ScalarProperty Name="DoctorId" ColumnName="Doctor_DoctorId" />
+      </EndProperty>
+      <EndProperty Name="SiteDoctors">
+        <ScalarProperty Name="SiteDoctorId" ColumnName="SiteDoctorId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="SiteSiteDoctors" TypeName="ClinicModel.SiteSiteDoctors" StoreEntitySet="SiteDoctors">
+      <EndProperty Name="Site">
+        <ScalarProperty Name="SiteId" ColumnName="Site_SiteId" />
+      </EndProperty>
+      <EndProperty Name="SiteDoctors">
+        <ScalarProperty Name="SiteDoctorId" ColumnName="SiteDoctorId" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

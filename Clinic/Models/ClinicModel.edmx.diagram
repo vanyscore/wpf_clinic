@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="1633aad5890b4782a50dda6eab99d358" Name="Diagram1" ZoomLevel="81" >
+        <EntityTypeShape EntityType="ClinicModel.Category" Width="1.5" PointX="5.75" PointY="2.375" />
+        <EntityTypeShape EntityType="ClinicModel.Doctor" Width="1.5" PointX="8" PointY="2.375" />
+        <AssociationConnector Association="ClinicModel.DoctorCategory" />
+        <EntityTypeShape EntityType="ClinicModel.Special" Width="1.5" PointX="10.375" PointY="2.375" />
+        <AssociationConnector Association="ClinicModel.DoctorSpecial" />
+        <EntityTypeShape EntityType="ClinicModel.PatientCard" Width="1.5" PointX="10.875" PointY="5.125" />
+        <EntityTypeShape EntityType="ClinicModel.Sex" Width="1.5" PointX="14.375" PointY="5" />
+        <AssociationConnector Association="ClinicModel.SexPatientCard" />
+        <EntityTypeShape EntityType="ClinicModel.CardPage" Width="1.5" PointX="14.375" PointY="7.375" />
+        <AssociationConnector Association="ClinicModel.PatientCardCardPage" />
+        <AssociationConnector Association="ClinicModel.CardPageDoctor" />
+        <EntityTypeShape EntityType="ClinicModel.Site" Width="1.5" PointX="4.625" PointY="5.25" />
+        <EntityTypeShape EntityType="ClinicModel.SiteAddress" Width="1.5" PointX="2.75" PointY="7" />
+        <EntityTypeShape EntityType="ClinicModel.Address" Width="1.5" PointX="2.625" PointY="3.75" />
+        <AssociationConnector Association="ClinicModel.AddressSiteAdresses" />
+        <AssociationConnector Association="ClinicModel.SiteSiteAdresses" />
+        <AssociationConnector Association="ClinicModel.AddressPatientCard" />
+        <EntityTypeShape EntityType="ClinicModel.Surgery" Width="1.5" PointX="6.25" PointY="5.25" />
+        <EntityTypeShape EntityType="ClinicModel.DistrictSchedule" Width="1.5" PointX="6.125" PointY="7.625" />
+        <AssociationConnector Association="ClinicModel.SurgeryDistrictSchedule" />
+        <AssociationConnector Association="ClinicModel.DoctorDistrictSchedule" />
+        <EntityTypeShape EntityType="ClinicModel.DoctorType" Width="1.5" PointX="10.375" PointY="0.5" />
+        <AssociationConnector Association="ClinicModel.DoctorTypeDoctor" />
+        <EntityTypeShape EntityType="ClinicModel.SiteDoctors" Width="1.5" PointX="13.25" PointY="2" />
+        <AssociationConnector Association="ClinicModel.DoctorSiteDoctors" />
+        <AssociationConnector Association="ClinicModel.SiteSiteDoctors" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

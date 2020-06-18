@@ -1,0 +1,355 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ClinicModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="ClinicModelStoreContainer">
+    <EntitySet Name="Categories" EntityType="ClinicModel.Store.Categories" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Doctors" EntityType="ClinicModel.Store.Doctors" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Specials" EntityType="ClinicModel.Store.Specials" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PatientCards" EntityType="ClinicModel.Store.PatientCards" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SexSet" EntityType="ClinicModel.Store.SexSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CardPages" EntityType="ClinicModel.Store.CardPages" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Sites" EntityType="ClinicModel.Store.Sites" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SiteAddresses" EntityType="ClinicModel.Store.SiteAddresses" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AddressSet" EntityType="ClinicModel.Store.AddressSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Surgeries" EntityType="ClinicModel.Store.Surgeries" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DistrictSchedules" EntityType="ClinicModel.Store.DistrictSchedules" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DoctorTypes" EntityType="ClinicModel.Store.DoctorTypes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SiteDoctors" EntityType="ClinicModel.Store.SiteDoctors" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="DoctorCategory" Association="ClinicModel.Store.DoctorCategory">
+      <End Role="Doctor" EntitySet="Doctors" />
+      <End Role="Category" EntitySet="Categories" />
+    </AssociationSet>
+    <AssociationSet Name="DoctorSpecial" Association="ClinicModel.Store.DoctorSpecial">
+      <End Role="Doctor" EntitySet="Doctors" />
+      <End Role="Special" EntitySet="Specials" />
+    </AssociationSet>
+    <AssociationSet Name="SexPatientCard" Association="ClinicModel.Store.SexPatientCard">
+      <End Role="Sex" EntitySet="SexSet" />
+      <End Role="PatientCard" EntitySet="PatientCards" />
+    </AssociationSet>
+    <AssociationSet Name="PatientCardCardPage" Association="ClinicModel.Store.PatientCardCardPage">
+      <End Role="PatientCard" EntitySet="PatientCards" />
+      <End Role="CardPage" EntitySet="CardPages" />
+    </AssociationSet>
+    <AssociationSet Name="CardPageDoctor" Association="ClinicModel.Store.CardPageDoctor">
+      <End Role="CardPage" EntitySet="CardPages" />
+      <End Role="Doctor" EntitySet="Doctors" />
+    </AssociationSet>
+    <AssociationSet Name="AddressSiteAdresses" Association="ClinicModel.Store.AddressSiteAdresses">
+      <End Role="Address" EntitySet="AddressSet" />
+      <End Role="SiteAdresses" EntitySet="SiteAddresses" />
+    </AssociationSet>
+    <AssociationSet Name="SiteSiteAdresses" Association="ClinicModel.Store.SiteSiteAdresses">
+      <End Role="Site" EntitySet="Sites" />
+      <End Role="SiteAdresses" EntitySet="SiteAddresses" />
+    </AssociationSet>
+    <AssociationSet Name="AddressPatientCard" Association="ClinicModel.Store.AddressPatientCard">
+      <End Role="Address" EntitySet="AddressSet" />
+      <End Role="PatientCard" EntitySet="PatientCards" />
+    </AssociationSet>
+    <AssociationSet Name="SurgeryDistrictSchedule" Association="ClinicModel.Store.SurgeryDistrictSchedule">
+      <End Role="Surgery" EntitySet="Surgeries" />
+      <End Role="DistrictSchedule" EntitySet="DistrictSchedules" />
+    </AssociationSet>
+    <AssociationSet Name="DoctorDistrictSchedule" Association="ClinicModel.Store.DoctorDistrictSchedule">
+      <End Role="Doctor" EntitySet="Doctors" />
+      <End Role="DistrictSchedule" EntitySet="DistrictSchedules" />
+    </AssociationSet>
+    <AssociationSet Name="DoctorTypeDoctor" Association="ClinicModel.Store.DoctorTypeDoctor">
+      <End Role="DoctorType" EntitySet="DoctorTypes" />
+      <End Role="Doctor" EntitySet="Doctors" />
+    </AssociationSet>
+    <AssociationSet Name="DoctorSiteDoctors" Association="ClinicModel.Store.DoctorSiteDoctors">
+      <End Role="Doctor" EntitySet="Doctors" />
+      <End Role="SiteDoctors" EntitySet="SiteDoctors" />
+    </AssociationSet>
+    <AssociationSet Name="SiteSiteDoctors" Association="ClinicModel.Store.SiteSiteDoctors">
+      <End Role="Site" EntitySet="Sites" />
+      <End Role="SiteDoctors" EntitySet="SiteDoctors" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Categories">
+    <Key>
+      <PropertyRef Name="CategoryId" />
+    </Key>
+    <Property Name="CategoryId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Doctors">
+    <Key>
+      <PropertyRef Name="DoctorId" />
+    </Key>
+    <Property Name="DoctorId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Surname" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Patrynum" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="SpecialId" Type="int" Nullable="false" />
+    <Property Name="CategoryId" Type="int" Nullable="false" />
+    <Property Name="Expirience" Type="int" Nullable="false" />
+    <Property Name="BirthDate" Type="datetime" Nullable="false" />
+    <Property Name="Icon" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DoctorTypeId" Type="int" Nullable="false" />
+    <Property Name="Category_CategoryId" Type="int" Nullable="false" />
+    <Property Name="Special_SpecialId" Type="int" Nullable="false" />
+    <Property Name="DoctorType_DoctorTypeId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Specials">
+    <Key>
+      <PropertyRef Name="SpecialId" />
+    </Key>
+    <Property Name="SpecialId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PatientCards">
+    <Key>
+      <PropertyRef Name="PatientCardId" />
+    </Key>
+    <Property Name="PatientCardId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Number" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Surname" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Patrynum" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="AddressId" Type="int" Nullable="false" />
+    <Property Name="SexId" Type="int" Nullable="false" />
+    <Property Name="Age" Type="int" Nullable="false" />
+    <Property Name="Icon" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Sex_SexId" Type="int" Nullable="false" />
+    <Property Name="Address_AddressId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SexSet">
+    <Key>
+      <PropertyRef Name="SexId" />
+    </Key>
+    <Property Name="SexId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CardPages">
+    <Key>
+      <PropertyRef Name="CardPageId" />
+    </Key>
+    <Property Name="CardPageId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PatientCardId" Type="int" Nullable="false" />
+    <Property Name="PageNumber" Type="int" Nullable="false" />
+    <Property Name="Date" Type="datetime" Nullable="false" />
+    <Property Name="Complaints" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Diagnosis" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Treatment" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DoctorId" Type="int" Nullable="false" />
+    <Property Name="PatientCard_PatientCardId" Type="int" Nullable="false" />
+    <Property Name="Doctor_DoctorId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Sites">
+    <Key>
+      <PropertyRef Name="SiteId" />
+    </Key>
+    <Property Name="SiteId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Number" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SiteAddresses">
+    <Key>
+      <PropertyRef Name="SiteAddressId" />
+    </Key>
+    <Property Name="SiteAddressId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SiteId" Type="int" Nullable="false" />
+    <Property Name="AddressId" Type="int" Nullable="false" />
+    <Property Name="Address_AddressId" Type="int" Nullable="false" />
+    <Property Name="Site_SiteId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AddressSet">
+    <Key>
+      <PropertyRef Name="AddressId" />
+    </Key>
+    <Property Name="AddressId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Surgeries">
+    <Key>
+      <PropertyRef Name="SurgeryId" />
+    </Key>
+    <Property Name="SurgeryId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Number" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DistrictSchedules">
+    <Key>
+      <PropertyRef Name="DistrictScheduleId" />
+    </Key>
+    <Property Name="DistrictScheduleId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SurgeryId" Type="int" Nullable="false" />
+    <Property Name="DoctorId" Type="int" Nullable="false" />
+    <Property Name="ReceiptDate" Type="datetime" Nullable="false" />
+    <Property Name="Surgery_SurgeryId" Type="int" Nullable="false" />
+    <Property Name="Doctor_DoctorId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DoctorTypes">
+    <Key>
+      <PropertyRef Name="DoctorTypeId" />
+    </Key>
+    <Property Name="DoctorTypeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SiteDoctors">
+    <Key>
+      <PropertyRef Name="SiteDoctorId" />
+    </Key>
+    <Property Name="SiteDoctorId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DoctorId" Type="int" Nullable="false" />
+    <Property Name="SiteId" Type="int" Nullable="false" />
+    <Property Name="Doctor_DoctorId" Type="int" Nullable="false" />
+    <Property Name="Site_SiteId" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="DoctorCategory">
+    <End Role="Doctor" Type="ClinicModel.Store.Doctors" Multiplicity="*" />
+    <End Role="Category" Type="ClinicModel.Store.Categories" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="CategoryId" />
+      </Principal>
+      <Dependent Role="Doctor">
+        <PropertyRef Name="Category_CategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DoctorSpecial">
+    <End Role="Doctor" Type="ClinicModel.Store.Doctors" Multiplicity="*" />
+    <End Role="Special" Type="ClinicModel.Store.Specials" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Special">
+        <PropertyRef Name="SpecialId" />
+      </Principal>
+      <Dependent Role="Doctor">
+        <PropertyRef Name="Special_SpecialId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SexPatientCard">
+    <End Role="Sex" Type="ClinicModel.Store.SexSet" Multiplicity="1" />
+    <End Role="PatientCard" Type="ClinicModel.Store.PatientCards" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sex">
+        <PropertyRef Name="SexId" />
+      </Principal>
+      <Dependent Role="PatientCard">
+        <PropertyRef Name="Sex_SexId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PatientCardCardPage">
+    <End Role="PatientCard" Type="ClinicModel.Store.PatientCards" Multiplicity="1" />
+    <End Role="CardPage" Type="ClinicModel.Store.CardPages" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PatientCard">
+        <PropertyRef Name="PatientCardId" />
+      </Principal>
+      <Dependent Role="CardPage">
+        <PropertyRef Name="PatientCard_PatientCardId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CardPageDoctor">
+    <End Role="CardPage" Type="ClinicModel.Store.CardPages" Multiplicity="*" />
+    <End Role="Doctor" Type="ClinicModel.Store.Doctors" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Doctor">
+        <PropertyRef Name="DoctorId" />
+      </Principal>
+      <Dependent Role="CardPage">
+        <PropertyRef Name="Doctor_DoctorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AddressSiteAdresses">
+    <End Role="Address" Type="ClinicModel.Store.AddressSet" Multiplicity="1" />
+    <End Role="SiteAdresses" Type="ClinicModel.Store.SiteAddresses" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Address">
+        <PropertyRef Name="AddressId" />
+      </Principal>
+      <Dependent Role="SiteAdresses">
+        <PropertyRef Name="Address_AddressId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SiteSiteAdresses">
+    <End Role="Site" Type="ClinicModel.Store.Sites" Multiplicity="1" />
+    <End Role="SiteAdresses" Type="ClinicModel.Store.SiteAddresses" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Site">
+        <PropertyRef Name="SiteId" />
+      </Principal>
+      <Dependent Role="SiteAdresses">
+        <PropertyRef Name="Site_SiteId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AddressPatientCard">
+    <End Role="Address" Type="ClinicModel.Store.AddressSet" Multiplicity="1" />
+    <End Role="PatientCard" Type="ClinicModel.Store.PatientCards" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Address">
+        <PropertyRef Name="AddressId" />
+      </Principal>
+      <Dependent Role="PatientCard">
+        <PropertyRef Name="Address_AddressId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SurgeryDistrictSchedule">
+    <End Role="Surgery" Type="ClinicModel.Store.Surgeries" Multiplicity="1" />
+    <End Role="DistrictSchedule" Type="ClinicModel.Store.DistrictSchedules" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Surgery">
+        <PropertyRef Name="SurgeryId" />
+      </Principal>
+      <Dependent Role="DistrictSchedule">
+        <PropertyRef Name="Surgery_SurgeryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DoctorDistrictSchedule">
+    <End Role="Doctor" Type="ClinicModel.Store.Doctors" Multiplicity="1" />
+    <End Role="DistrictSchedule" Type="ClinicModel.Store.DistrictSchedules" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Doctor">
+        <PropertyRef Name="DoctorId" />
+      </Principal>
+      <Dependent Role="DistrictSchedule">
+        <PropertyRef Name="Doctor_DoctorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DoctorTypeDoctor">
+    <End Role="DoctorType" Type="ClinicModel.Store.DoctorTypes" Multiplicity="1" />
+    <End Role="Doctor" Type="ClinicModel.Store.Doctors" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DoctorType">
+        <PropertyRef Name="DoctorTypeId" />
+      </Principal>
+      <Dependent Role="Doctor">
+        <PropertyRef Name="DoctorType_DoctorTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DoctorSiteDoctors">
+    <End Role="Doctor" Type="ClinicModel.Store.Doctors" Multiplicity="1" />
+    <End Role="SiteDoctors" Type="ClinicModel.Store.SiteDoctors" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Doctor">
+        <PropertyRef Name="DoctorId" />
+      </Principal>
+      <Dependent Role="SiteDoctors">
+        <PropertyRef Name="Doctor_DoctorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SiteSiteDoctors">
+    <End Role="Site" Type="ClinicModel.Store.Sites" Multiplicity="1" />
+    <End Role="SiteDoctors" Type="ClinicModel.Store.SiteDoctors" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Site">
+        <PropertyRef Name="SiteId" />
+      </Principal>
+      <Dependent Role="SiteDoctors">
+        <PropertyRef Name="Site_SiteId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

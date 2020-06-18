@@ -1,0 +1,108 @@
+I:\Work\Projects\C# Projects\Курсовые\Курсовая 2 курс\Clinic\Clinic\obj\Debug\MainWindow.g.cs
+I:\Work\Projects\C# Projects\Курсовые\Курсовая 2 курс\Clinic\Clinic\obj\Debug\Pages\DoctorsPage.g.cs
+I:\Work\Projects\C# Projects\Курсовые\Курсовая 2 курс\Clinic\Clinic\obj\Debug\Pages\MenuPage.g.cs
+I:\Work\Projects\C# Projects\Курсовые\Курсовая 2 курс\Clinic\Clinic\obj\Debug\Pages\PatientCardsPage.g.cs
+I:\Work\Projects\C# Projects\Курсовые\Курсовая 2 курс\Clinic\Clinic\obj\Debug\Templates\DoctorTemplate.g.cs
+I:\Work\Projects\C# Projects\Курсовые\Курсовая 2 курс\Clinic\Clinic\obj\Debug\Templates\MenuItemTemplate.g.cs
+I:\Work\Projects\C# Projects\Курсовые\Курсовая 2 курс\Clinic\Clinic\obj\Debug\Templates\PatientCardTemplate.g.cs
+I:\Work\Projects\C# Projects\Курсовые\Курсовая 2 курс\Clinic\Clinic\obj\Debug\Pages\SchedulePage.g.cs
+I:\Work\Projects\C# Projects\Курсовые\Курсовая 2 курс\Clinic\Clinic\obj\Debug\Templates\SpecialTemplate.g.cs
+I:\Work\Projects\C# Projects\Курсовые\Курсовая 2 курс\Clinic\Clinic\obj\Debug\Windows\CardPageWindow.g.cs
+I:\Work\Projects\C# Projects\Курсовые\Курсовая 2 курс\Clinic\Clinic\obj\Debug\App.g.cs
+I:\Work\Projects\C# Projects\Курсовые\Курсовая 2 курс\Clinic\Clinic\obj\Debug\Clinic_Content.g.cs
+I:\Work\Projects\C# Projects\Курсовые\Курсовая 2 курс\Clinic\Clinic\obj\Debug\GeneratedInternalTypeHelper.g.cs
+I:\Work\Projects\C# Projects\Курсовые\Курсовая 2 курс\Clinic\Clinic\obj\Debug\Clinic_MarkupCompile.cache
+I:\Work\Projects\C# Projects\Курсовые\Курсовая 2 курс\Clinic\Clinic\obj\Debug\Clinic_MarkupCompile.lref
+I:\Work\Projects\C# Projects\Курсовые\Курсовая 2 курс\Clinic\Clinic\bin\Debug\Data\ClinicDatabase.mdf
+I:\Work\Projects\C# Projects\Курсовые\Курсовая 2 курс\Clinic\Clinic\bin\Debug\Data\ClinicDatabase_log.ldf
+I:\Work\Projects\C# Projects\Курсовые\Курсовая 2 курс\Clinic\Clinic\bin\Debug\Clinic.exe.config
+I:\Work\Projects\C# Projects\Курсовые\Курсовая 2 курс\Clinic\Clinic\bin\Debug\Clinic.exe
+I:\Work\Projects\C# Projects\Курсовые\Курсовая 2 курс\Clinic\Clinic\bin\Debug\Clinic.pdb
+I:\Work\Projects\C# Projects\Курсовые\Курсовая 2 курс\Clinic\Clinic\bin\Debug\EntityFramework.dll
+I:\Work\Projects\C# Projects\Курсовые\Курсовая 2 курс\Clinic\Clinic\bin\Debug\EntityFramework.SqlServer.dll
+I:\Work\Projects\C# Projects\Курсовые\Курсовая 2 курс\Clinic\Clinic\bin\Debug\MaterialDesignColors.dll
+I:\Work\Projects\C# Projects\Курсовые\Курсовая 2 курс\Clinic\Clinic\bin\Debug\MaterialDesignThemes.Wpf.dll
+I:\Work\Projects\C# Projects\Курсовые\Курсовая 2 курс\Clinic\Clinic\bin\Debug\EntityFramework.xml
+I:\Work\Projects\C# Projects\Курсовые\Курсовая 2 курс\Clinic\Clinic\bin\Debug\EntityFramework.SqlServer.xml
+I:\Work\Projects\C# Projects\Курсовые\Курсовая 2 курс\Clinic\Clinic\bin\Debug\MaterialDesignColors.pdb
+I:\Work\Projects\C# Projects\Курсовые\Курсовая 2 курс\Clinic\Clinic\bin\Debug\MaterialDesignThemes.Wpf.pdb
+I:\Work\Projects\C# Projects\Курсовые\Курсовая 2 курс\Clinic\Clinic\bin\Debug\MaterialDesignThemes.Wpf.xml
+I:\Work\Projects\C# Projects\Курсовые\Курсовая 2 курс\Clinic\Clinic\obj\Debug\App.baml
+I:\Work\Projects\C# Projects\Курсовые\Курсовая 2 курс\Clinic\Clinic\obj\Debug\MainWindow.baml
+I:\Work\Projects\C# Projects\Курсовые\Курсовая 2 курс\Clinic\Clinic\obj\Debug\Pages\DoctorsPage.baml
+I:\Work\Projects\C# Projects\Курсовые\Курсовая 2 курс\Clinic\Clinic\obj\Debug\Pages\MenuPage.baml
+I:\Work\Projects\C# Projects\Курсовые\Курсовая 2 курс\Clinic\Clinic\obj\Debug\Pages\PatientCardsPage.baml
+I:\Work\Projects\C# Projects\Курсовые\Курсовая 2 курс\Clinic\Clinic\obj\Debug\Templates\DoctorTemplate.baml
+I:\Work\Projects\C# Projects\Курсовые\Курсовая 2 курс\Clinic\Clinic\obj\Debug\Templates\MenuItemTemplate.baml
+I:\Work\Projects\C# Projects\Курсовые\Курсовая 2 курс\Clinic\Clinic\obj\Debug\Templates\PatientCardTemplate.baml
+I:\Work\Projects\C# Projects\Курсовые\Курсовая 2 курс\Clinic\Clinic\obj\Debug\Pages\SchedulePage.baml
+I:\Work\Projects\C# Projects\Курсовые\Курсовая 2 курс\Clinic\Clinic\obj\Debug\Templates\SpecialTemplate.baml
+I:\Work\Projects\C# Projects\Курсовые\Курсовая 2 курс\Clinic\Clinic\obj\Debug\Windows\CardPageWindow.baml
+I:\Work\Projects\C# Projects\Курсовые\Курсовая 2 курс\Clinic\Clinic\obj\Debug\Clinic.g.resources
+I:\Work\Projects\C# Projects\Курсовые\Курсовая 2 курс\Clinic\Clinic\obj\Debug\Clinic.Properties.Resources.resources
+I:\Work\Projects\C# Projects\Курсовые\Курсовая 2 курс\Clinic\Clinic\obj\Debug\Clinic.csproj.GenerateResource.cache
+I:\Work\Projects\C# Projects\Курсовые\Курсовая 2 курс\Clinic\Clinic\obj\Debug\Clinic.csproj.CoreCompileInputs.cache
+I:\Work\Projects\C# Projects\Курсовые\Курсовая 2 курс\Clinic\Clinic\obj\Debug\Clinic.csproj.CopyComplete
+I:\Work\Projects\C# Projects\Курсовые\Курсовая 2 курс\Clinic\Clinic\obj\Debug\Clinic.exe
+I:\Work\Projects\C# Projects\Курсовые\Курсовая 2 курс\Clinic\Clinic\obj\Debug\Clinic.pdb
+I:\Work\Projects\C# Projects\Курсовые\Курсовая 2 курс\Clinic\Clinic\obj\Debug\Clinic.csprojAssemblyReference.cache
+I:\Work\Projects\C# Projects\Курсовые\Курсовая 2 курс\Clinic\Clinic\obj\Debug\Templates\ScheduleDayTemplate.g.cs
+I:\Work\Projects\C# Projects\Курсовые\Курсовая 2 курс\Clinic\Clinic\obj\Debug\Templates\ScheduleDayTemplate.baml
+I:\Work\Projects\C# Projects\Курсовые\Курсовая 2 курс\Clinic\Clinic\obj\Debug\Templates\ScheduleItemTemplate.g.cs
+I:\Work\Projects\C# Projects\Курсовые\Курсовая 2 курс\Clinic\Clinic\obj\Debug\Templates\ScheduleItemTemplate.baml
+I:\Work\Projects\C# Projects\Курсовые\Курсовая 2 курс\Clinic\Clinic\obj\Debug\Windows\DoctorInfoWindow.g.cs
+I:\Work\Projects\C# Projects\Курсовые\Курсовая 2 курс\Clinic\Clinic\obj\Debug\Windows\DoctorInfoWindow.baml
+I:\Work\Midis\Курсовые\Курсовая 2 курс\Clinic\Clinic\bin\Debug\Clinic.exe.config
+I:\Work\Midis\Курсовые\Курсовая 2 курс\Clinic\Clinic\bin\Debug\Clinic.exe
+I:\Work\Midis\Курсовые\Курсовая 2 курс\Clinic\Clinic\bin\Debug\Clinic.pdb
+I:\Work\Midis\Курсовые\Курсовая 2 курс\Clinic\Clinic\bin\Debug\EntityFramework.dll
+I:\Work\Midis\Курсовые\Курсовая 2 курс\Clinic\Clinic\bin\Debug\EntityFramework.SqlServer.dll
+I:\Work\Midis\Курсовые\Курсовая 2 курс\Clinic\Clinic\bin\Debug\MaterialDesignColors.dll
+I:\Work\Midis\Курсовые\Курсовая 2 курс\Clinic\Clinic\bin\Debug\MaterialDesignThemes.Wpf.dll
+I:\Work\Midis\Курсовые\Курсовая 2 курс\Clinic\Clinic\bin\Debug\EntityFramework.xml
+I:\Work\Midis\Курсовые\Курсовая 2 курс\Clinic\Clinic\bin\Debug\EntityFramework.SqlServer.xml
+I:\Work\Midis\Курсовые\Курсовая 2 курс\Clinic\Clinic\bin\Debug\MaterialDesignColors.pdb
+I:\Work\Midis\Курсовые\Курсовая 2 курс\Clinic\Clinic\bin\Debug\MaterialDesignThemes.Wpf.pdb
+I:\Work\Midis\Курсовые\Курсовая 2 курс\Clinic\Clinic\bin\Debug\MaterialDesignThemes.Wpf.xml
+I:\Work\Midis\Курсовые\Курсовая 2 курс\Clinic\Clinic\obj\Debug\Clinic.csprojAssemblyReference.cache
+I:\Work\Midis\Курсовые\Курсовая 2 курс\Clinic\Clinic\obj\Debug\MainWindow.g.cs
+I:\Work\Midis\Курсовые\Курсовая 2 курс\Clinic\Clinic\obj\Debug\Pages\DoctorsPage.g.cs
+I:\Work\Midis\Курсовые\Курсовая 2 курс\Clinic\Clinic\obj\Debug\Pages\MenuPage.g.cs
+I:\Work\Midis\Курсовые\Курсовая 2 курс\Clinic\Clinic\obj\Debug\Pages\PatientCardsPage.g.cs
+I:\Work\Midis\Курсовые\Курсовая 2 курс\Clinic\Clinic\obj\Debug\Templates\DoctorTemplate.g.cs
+I:\Work\Midis\Курсовые\Курсовая 2 курс\Clinic\Clinic\obj\Debug\Templates\MenuItemTemplate.g.cs
+I:\Work\Midis\Курсовые\Курсовая 2 курс\Clinic\Clinic\obj\Debug\Templates\PatientCardTemplate.g.cs
+I:\Work\Midis\Курсовые\Курсовая 2 курс\Clinic\Clinic\obj\Debug\Pages\SchedulePage.g.cs
+I:\Work\Midis\Курсовые\Курсовая 2 курс\Clinic\Clinic\obj\Debug\Templates\ScheduleDayTemplate.g.cs
+I:\Work\Midis\Курсовые\Курсовая 2 курс\Clinic\Clinic\obj\Debug\Templates\ScheduleItemTemplate.g.cs
+I:\Work\Midis\Курсовые\Курсовая 2 курс\Clinic\Clinic\obj\Debug\Templates\SpecialTemplate.g.cs
+I:\Work\Midis\Курсовые\Курсовая 2 курс\Clinic\Clinic\obj\Debug\Windows\CardPageWindow.g.cs
+I:\Work\Midis\Курсовые\Курсовая 2 курс\Clinic\Clinic\obj\Debug\Windows\DoctorInfoWindow.g.cs
+I:\Work\Midis\Курсовые\Курсовая 2 курс\Clinic\Clinic\obj\Debug\App.g.cs
+I:\Work\Midis\Курсовые\Курсовая 2 курс\Clinic\Clinic\obj\Debug\Clinic_Content.g.cs
+I:\Work\Midis\Курсовые\Курсовая 2 курс\Clinic\Clinic\obj\Debug\GeneratedInternalTypeHelper.g.cs
+I:\Work\Midis\Курсовые\Курсовая 2 курс\Clinic\Clinic\obj\Debug\Clinic_MarkupCompile.cache
+I:\Work\Midis\Курсовые\Курсовая 2 курс\Clinic\Clinic\obj\Debug\Clinic_MarkupCompile.lref
+I:\Work\Midis\Курсовые\Курсовая 2 курс\Clinic\Clinic\obj\Debug\App.baml
+I:\Work\Midis\Курсовые\Курсовая 2 курс\Clinic\Clinic\obj\Debug\MainWindow.baml
+I:\Work\Midis\Курсовые\Курсовая 2 курс\Clinic\Clinic\obj\Debug\Pages\DoctorsPage.baml
+I:\Work\Midis\Курсовые\Курсовая 2 курс\Clinic\Clinic\obj\Debug\Pages\MenuPage.baml
+I:\Work\Midis\Курсовые\Курсовая 2 курс\Clinic\Clinic\obj\Debug\Pages\PatientCardsPage.baml
+I:\Work\Midis\Курсовые\Курсовая 2 курс\Clinic\Clinic\obj\Debug\Templates\DoctorTemplate.baml
+I:\Work\Midis\Курсовые\Курсовая 2 курс\Clinic\Clinic\obj\Debug\Templates\MenuItemTemplate.baml
+I:\Work\Midis\Курсовые\Курсовая 2 курс\Clinic\Clinic\obj\Debug\Templates\PatientCardTemplate.baml
+I:\Work\Midis\Курсовые\Курсовая 2 курс\Clinic\Clinic\obj\Debug\Pages\SchedulePage.baml
+I:\Work\Midis\Курсовые\Курсовая 2 курс\Clinic\Clinic\obj\Debug\Templates\ScheduleDayTemplate.baml
+I:\Work\Midis\Курсовые\Курсовая 2 курс\Clinic\Clinic\obj\Debug\Templates\ScheduleItemTemplate.baml
+I:\Work\Midis\Курсовые\Курсовая 2 курс\Clinic\Clinic\obj\Debug\Templates\SpecialTemplate.baml
+I:\Work\Midis\Курсовые\Курсовая 2 курс\Clinic\Clinic\obj\Debug\Windows\CardPageWindow.baml
+I:\Work\Midis\Курсовые\Курсовая 2 курс\Clinic\Clinic\obj\Debug\Windows\DoctorInfoWindow.baml
+I:\Work\Midis\Курсовые\Курсовая 2 курс\Clinic\Clinic\obj\Debug\Clinic.g.resources
+I:\Work\Midis\Курсовые\Курсовая 2 курс\Clinic\Clinic\obj\Debug\Clinic.Properties.Resources.resources
+I:\Work\Midis\Курсовые\Курсовая 2 курс\Clinic\Clinic\obj\Debug\Clinic.csproj.GenerateResource.cache
+I:\Work\Midis\Курсовые\Курсовая 2 курс\Clinic\Clinic\obj\Debug\Clinic.csproj.CoreCompileInputs.cache
+I:\Work\Midis\Курсовые\Курсовая 2 курс\Clinic\Clinic\obj\Debug\Clinic.csproj.CopyComplete
+I:\Work\Midis\Курсовые\Курсовая 2 курс\Clinic\Clinic\obj\Debug\Clinic.exe
+I:\Work\Midis\Курсовые\Курсовая 2 курс\Clinic\Clinic\obj\Debug\Clinic.pdb
+I:\Work\Midis\Курсовые\Курсовая 2 курс\Clinic\Clinic\bin\Debug\Data\ClinicDatabase.mdf
+I:\Work\Midis\Курсовые\Курсовая 2 курс\Clinic\Clinic\bin\Debug\Data\ClinicDatabase_log.ldf

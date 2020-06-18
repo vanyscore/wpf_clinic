@@ -1,0 +1,160 @@
+﻿<Window x:Class="Clinic.Windows.CardPageWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Clinic.Windows" xmlns:materials="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="CardPageWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.15*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="0.15*"/>
+        </Grid.RowDefinitions>
+
+        <materials:Card>
+            <Grid Background="{StaticResource red_light}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel
+                    Orientation="Horizontal"
+                    VerticalAlignment="Stretch"
+                    HorizontalAlignment="Center">
+                    <TextBlock
+                        Text="Номер карты:"
+                        Foreground="White"
+                        FontWeight="Medium"
+                        VerticalAlignment="Center"
+                        FontSize="18"/>
+                    <TextBlock
+                        Text="{Binding Path=PatientCard.Number, FallbackValue=12345678}"
+                        Foreground="White"
+                        FontSize="16"
+                        Margin="10 0 0 0"
+                        VerticalAlignment="Center"/>
+                </StackPanel>
+                <StackPanel
+                    Grid.Column="1"
+                    Orientation="Horizontal"
+                    VerticalAlignment="Stretch"
+                    HorizontalAlignment="Center">
+                    <TextBlock
+                        Text="ФИО:"
+                        Foreground="White"
+                        FontWeight="Medium"
+                        VerticalAlignment="Center"
+                        FontSize="18"/>
+                    <TextBlock
+                        Foreground="White"
+                        FontSize="16"
+                        Margin="10 0 0 0"
+                        VerticalAlignment="Center">
+                        <Run Text="{Binding Path=PatientCard.Name, FallbackValue=Иван}"/>
+                        <Run Text="{Binding Path=PatientCard.Surname, FallbackValue=Иванович}"/>
+                        <Run Text="{Binding Path=PatientCard.Patrynum, FallbackValue=Иванов}"/>
+                    </TextBlock>
+                </StackPanel>
+                <StackPanel
+                    Grid.Column="2"
+                    Orientation="Horizontal"
+                    VerticalAlignment="Stretch"
+                    HorizontalAlignment="Center">
+                    <TextBlock
+                        Text="Страница:"
+                        Foreground="White"
+                        FontWeight="Medium"
+                        VerticalAlignment="Center"
+                        FontSize="18"/>
+                    <TextBlock
+                        Foreground="White"
+                        FontSize="16"
+                        Margin="10 0 0 0"
+                        VerticalAlignment="Center">
+                        <Run Text="{Binding CurrentPageIndex, FallbackValue=1}" FontWeight="Medium"/>
+                        <Run Text="из"/>
+                        <Run Text="{Binding PageCount, FallbackValue=3}" FontWeight="Medium"/>
+                    </TextBlock>
+                </StackPanel>
+            </Grid>
+        </materials:Card>
+
+        <StackPanel 
+            Orientation="Vertical"
+            Grid.Row="1"
+            Margin="20">
+            <TextBlock FontSize="20">
+                <Run Text="Жалобы: " FontWeight="Medium"/>
+                <Run Text="{Binding Path=CurrentPage.Complaints, FallbackValue=Болит_горло_кашель_сопли}"/>
+            </TextBlock>
+            <TextBlock Margin="0 20 0 0" FontSize="20">
+                <Run Text="Диагноз: " FontWeight="Medium"/>
+                <Run Text="{Binding Path=CurrentPage.Diagnosis, FallbackValue=Простуда}"/>
+            </TextBlock>
+            <TextBlock Margin="0 20 0 0"  FontSize="20">
+                <Run Text="Лечение: " FontWeight="Medium"/>
+                <Run Text="{Binding Path=CurrentPage.Treatment, FallbackValue=Полоскать_горло}"/>
+            </TextBlock>
+            <TextBlock Margin="0 20 0 0" FontSize="20">
+                <Run Text="Принимающий врач: " FontWeight="Medium"/>
+                <Run Text="{Binding Path=CurrentPage.Doctor.Fullname, FallbackValue=Иванов_Иван_Иванович}"/>
+            </TextBlock>
+            <Button Content="Открыть информацию о враче"
+                    Background="{StaticResource red_light}"
+                    BorderBrush="{StaticResource red_light}"
+                    Command="{Binding OpenDoctorInfo}"
+                    Margin="0 20 0 0"/>
+        </StackPanel>
+        
+        <Grid Grid.Row="2" Background="{StaticResource red_light}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.5*"/>
+                <ColumnDefinition Width="0.5*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Дата приёма-->
+            <StackPanel
+                    Orientation="Horizontal"
+                    VerticalAlignment="Stretch"
+                    HorizontalAlignment="Center">
+                <TextBlock
+                        Text="Дата приёма:"
+                        Foreground="White"
+                        FontWeight="Medium"
+                        VerticalAlignment="Center"
+                        FontSize="18"/>
+                <TextBlock
+                        Text="{Binding CurrentPage.Date, FallbackValue=18.03.2019}"
+                        Foreground="White"
+                        FontSize="16"
+                        Margin="10 3 0 0"
+                        VerticalAlignment="Center"/>
+            </StackPanel>
+            <!-- Стрелки-->
+            <Grid Grid.Column="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Button
+                    Margin="0 0 10 0"
+                    Content="Назад"
+                    BorderBrush="{StaticResource red_light}"
+                    Background="{StaticResource red_light}"
+                    Command="{Binding PreviousPage}"/>
+                <Button
+                    Grid.Column="1"
+                    Margin="10 0 10 0"
+                    Content="Вперёд"
+                    BorderBrush="{StaticResource red_light}"
+                    Background="{StaticResource red_light}"
+                    Command="{Binding NextPage}"/>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

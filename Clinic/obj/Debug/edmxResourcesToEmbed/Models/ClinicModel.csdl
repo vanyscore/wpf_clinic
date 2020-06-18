@@ -1,0 +1,264 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="ClinicModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="ClinicModelContainer" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Categories" EntityType="ClinicModel.Category" />
+    <EntitySet Name="Doctors" EntityType="ClinicModel.Doctor" />
+    <AssociationSet Name="DoctorCategory" Association="ClinicModel.DoctorCategory">
+      <End Role="Doctor" EntitySet="Doctors" />
+      <End Role="Category" EntitySet="Categories" />
+    </AssociationSet>
+    <EntitySet Name="Specials" EntityType="ClinicModel.Special" />
+    <AssociationSet Name="DoctorSpecial" Association="ClinicModel.DoctorSpecial">
+      <End Role="Doctor" EntitySet="Doctors" />
+      <End Role="Special" EntitySet="Specials" />
+    </AssociationSet>
+    <EntitySet Name="PatientCards" EntityType="ClinicModel.PatientCard" />
+    <EntitySet Name="SexSet" EntityType="ClinicModel.Sex" />
+    <AssociationSet Name="SexPatientCard" Association="ClinicModel.SexPatientCard">
+      <End Role="Sex" EntitySet="SexSet" />
+      <End Role="PatientCard" EntitySet="PatientCards" />
+    </AssociationSet>
+    <EntitySet Name="CardPages" EntityType="ClinicModel.CardPage" />
+    <AssociationSet Name="PatientCardCardPage" Association="ClinicModel.PatientCardCardPage">
+      <End Role="PatientCard" EntitySet="PatientCards" />
+      <End Role="CardPage" EntitySet="CardPages" />
+    </AssociationSet>
+    <AssociationSet Name="CardPageDoctor" Association="ClinicModel.CardPageDoctor">
+      <End Role="CardPage" EntitySet="CardPages" />
+      <End Role="Doctor" EntitySet="Doctors" />
+    </AssociationSet>
+    <EntitySet Name="Sites" EntityType="ClinicModel.Site" />
+    <EntitySet Name="SiteAddresses" EntityType="ClinicModel.SiteAddress" />
+    <EntitySet Name="AddressSet" EntityType="ClinicModel.Address" />
+    <AssociationSet Name="AddressSiteAdresses" Association="ClinicModel.AddressSiteAdresses">
+      <End Role="Address" EntitySet="AddressSet" />
+      <End Role="SiteAdresses" EntitySet="SiteAddresses" />
+    </AssociationSet>
+    <AssociationSet Name="SiteSiteAdresses" Association="ClinicModel.SiteSiteAdresses">
+      <End Role="Site" EntitySet="Sites" />
+      <End Role="SiteAdresses" EntitySet="SiteAddresses" />
+    </AssociationSet>
+    <AssociationSet Name="AddressPatientCard" Association="ClinicModel.AddressPatientCard">
+      <End Role="Address" EntitySet="AddressSet" />
+      <End Role="PatientCard" EntitySet="PatientCards" />
+    </AssociationSet>
+    <EntitySet Name="Surgeries" EntityType="ClinicModel.Surgery" />
+    <EntitySet Name="DistrictSchedules" EntityType="ClinicModel.DistrictSchedule" />
+    <AssociationSet Name="SurgeryDistrictSchedule" Association="ClinicModel.SurgeryDistrictSchedule">
+      <End Role="Surgery" EntitySet="Surgeries" />
+      <End Role="DistrictSchedule" EntitySet="DistrictSchedules" />
+    </AssociationSet>
+    <AssociationSet Name="DoctorDistrictSchedule" Association="ClinicModel.DoctorDistrictSchedule">
+      <End Role="Doctor" EntitySet="Doctors" />
+      <End Role="DistrictSchedule" EntitySet="DistrictSchedules" />
+    </AssociationSet>
+    <EntitySet Name="DoctorTypes" EntityType="ClinicModel.DoctorType" />
+    <AssociationSet Name="DoctorTypeDoctor" Association="ClinicModel.DoctorTypeDoctor">
+      <End Role="DoctorType" EntitySet="DoctorTypes" />
+      <End Role="Doctor" EntitySet="Doctors" />
+    </AssociationSet>
+    <EntitySet Name="SiteDoctors" EntityType="ClinicModel.SiteDoctors" />
+    <AssociationSet Name="DoctorSiteDoctors" Association="ClinicModel.DoctorSiteDoctors">
+      <End Role="Doctor" EntitySet="Doctors" />
+      <End Role="SiteDoctors" EntitySet="SiteDoctors" />
+    </AssociationSet>
+    <AssociationSet Name="SiteSiteDoctors" Association="ClinicModel.SiteSiteDoctors">
+      <End Role="Site" EntitySet="Sites" />
+      <End Role="SiteDoctors" EntitySet="SiteDoctors" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="CategoryId" />
+    </Key>
+    <Property Name="CategoryId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Description" Type="String" Nullable="false" />
+    <NavigationProperty Name="Doctors" Relationship="ClinicModel.DoctorCategory" FromRole="Category" ToRole="Doctor" />
+  </EntityType>
+  <EntityType Name="Doctor">
+    <Key>
+      <PropertyRef Name="DoctorId" />
+    </Key>
+    <Property Name="DoctorId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" />
+    <Property Name="Surname" Type="String" Nullable="false" />
+    <Property Name="Patrynum" Type="String" Nullable="false" />
+    <Property Name="SpecialId" Type="Int32" Nullable="false" />
+    <Property Name="CategoryId" Type="Int32" Nullable="false" />
+    <Property Name="Expirience" Type="Int32" Nullable="false" />
+    <Property Name="BirthDate" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="Category" Relationship="ClinicModel.DoctorCategory" FromRole="Doctor" ToRole="Category" />
+    <NavigationProperty Name="Special" Relationship="ClinicModel.DoctorSpecial" FromRole="Doctor" ToRole="Special" />
+    <Property Name="Icon" Type="String" Nullable="false" />
+    <NavigationProperty Name="CardPages" Relationship="ClinicModel.CardPageDoctor" FromRole="Doctor" ToRole="CardPage" />
+    <NavigationProperty Name="DistrictSchedule" Relationship="ClinicModel.DoctorDistrictSchedule" FromRole="Doctor" ToRole="DistrictSchedule" />
+    <Property Name="DoctorTypeId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="DoctorType" Relationship="ClinicModel.DoctorTypeDoctor" FromRole="Doctor" ToRole="DoctorType" />
+    <NavigationProperty Name="SiteDoctors" Relationship="ClinicModel.DoctorSiteDoctors" FromRole="Doctor" ToRole="SiteDoctors" />
+  </EntityType>
+  <Association Name="DoctorCategory">
+    <End Type="ClinicModel.Doctor" Role="Doctor" Multiplicity="*" />
+    <End Type="ClinicModel.Category" Role="Category" Multiplicity="1" />
+  </Association>
+  <EntityType Name="Special">
+    <Key>
+      <PropertyRef Name="SpecialId" />
+    </Key>
+    <Property Name="SpecialId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Description" Type="String" Nullable="false" />
+    <NavigationProperty Name="Doctors" Relationship="ClinicModel.DoctorSpecial" FromRole="Special" ToRole="Doctor" />
+  </EntityType>
+  <Association Name="DoctorSpecial">
+    <End Type="ClinicModel.Doctor" Role="Doctor" Multiplicity="*" />
+    <End Type="ClinicModel.Special" Role="Special" Multiplicity="1" />
+  </Association>
+  <EntityType Name="PatientCard">
+    <Key>
+      <PropertyRef Name="PatientCardId" />
+    </Key>
+    <Property Name="PatientCardId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Number" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" />
+    <Property Name="Surname" Type="String" Nullable="false" />
+    <Property Name="Patrynum" Type="String" Nullable="false" />
+    <Property Name="AddressId" Type="Int32" Nullable="false" />
+    <Property Name="SexId" Type="Int32" Nullable="false" />
+    <Property Name="Age" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Sex" Relationship="ClinicModel.SexPatientCard" FromRole="PatientCard" ToRole="Sex" />
+    <NavigationProperty Name="CardPages" Relationship="ClinicModel.PatientCardCardPage" FromRole="PatientCard" ToRole="CardPage" />
+    <Property Name="Icon" Type="String" Nullable="false" />
+    <NavigationProperty Name="Address" Relationship="ClinicModel.AddressPatientCard" FromRole="PatientCard" ToRole="Address" />
+  </EntityType>
+  <EntityType Name="Sex">
+    <Key>
+      <PropertyRef Name="SexId" />
+    </Key>
+    <Property Name="SexId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" />
+    <NavigationProperty Name="PatientCards" Relationship="ClinicModel.SexPatientCard" FromRole="Sex" ToRole="PatientCard" />
+  </EntityType>
+  <Association Name="SexPatientCard">
+    <End Type="ClinicModel.Sex" Role="Sex" Multiplicity="1" />
+    <End Type="ClinicModel.PatientCard" Role="PatientCard" Multiplicity="*" />
+  </Association>
+  <EntityType Name="CardPage">
+    <Key>
+      <PropertyRef Name="CardPageId" />
+    </Key>
+    <Property Name="CardPageId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PatientCardId" Type="Int32" Nullable="false" />
+    <Property Name="PageNumber" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="PatientCard" Relationship="ClinicModel.PatientCardCardPage" FromRole="CardPage" ToRole="PatientCard" />
+    <Property Name="Date" Type="DateTime" Nullable="false" />
+    <Property Name="Complaints" Type="String" Nullable="false" />
+    <Property Name="Diagnosis" Type="String" Nullable="false" />
+    <Property Name="Treatment" Type="String" Nullable="false" />
+    <Property Name="DoctorId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Doctor" Relationship="ClinicModel.CardPageDoctor" FromRole="CardPage" ToRole="Doctor" />
+  </EntityType>
+  <Association Name="PatientCardCardPage">
+    <End Type="ClinicModel.PatientCard" Role="PatientCard" Multiplicity="1" />
+    <End Type="ClinicModel.CardPage" Role="CardPage" Multiplicity="*" />
+  </Association>
+  <Association Name="CardPageDoctor">
+    <End Type="ClinicModel.CardPage" Role="CardPage" Multiplicity="*" />
+    <End Type="ClinicModel.Doctor" Role="Doctor" Multiplicity="1" />
+  </Association>
+  <EntityType Name="Site">
+    <Key>
+      <PropertyRef Name="SiteId" />
+    </Key>
+    <Property Name="SiteId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Number" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="SiteAdresses" Relationship="ClinicModel.SiteSiteAdresses" FromRole="Site" ToRole="SiteAdresses" />
+    <NavigationProperty Name="SiteDoctors" Relationship="ClinicModel.SiteSiteDoctors" FromRole="Site" ToRole="SiteDoctors" />
+  </EntityType>
+  <EntityType Name="SiteAddress">
+    <Key>
+      <PropertyRef Name="SiteAddressId" />
+    </Key>
+    <Property Name="SiteAddressId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SiteId" Type="Int32" Nullable="false" />
+    <Property Name="AddressId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Address" Relationship="ClinicModel.AddressSiteAdresses" FromRole="SiteAdresses" ToRole="Address" />
+    <NavigationProperty Name="Site" Relationship="ClinicModel.SiteSiteAdresses" FromRole="SiteAdresses" ToRole="Site" />
+  </EntityType>
+  <EntityType Name="Address">
+    <Key>
+      <PropertyRef Name="AddressId" />
+    </Key>
+    <Property Name="AddressId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" />
+    <NavigationProperty Name="SiteAdresses" Relationship="ClinicModel.AddressSiteAdresses" FromRole="Address" ToRole="SiteAdresses" />
+    <NavigationProperty Name="PatientCard" Relationship="ClinicModel.AddressPatientCard" FromRole="Address" ToRole="PatientCard" />
+  </EntityType>
+  <Association Name="AddressSiteAdresses">
+    <End Type="ClinicModel.Address" Role="Address" Multiplicity="1" />
+    <End Type="ClinicModel.SiteAddress" Role="SiteAdresses" Multiplicity="*" />
+  </Association>
+  <Association Name="SiteSiteAdresses">
+    <End Type="ClinicModel.Site" Role="Site" Multiplicity="1" />
+    <End Type="ClinicModel.SiteAddress" Role="SiteAdresses" Multiplicity="*" />
+  </Association>
+  <Association Name="AddressPatientCard">
+    <End Type="ClinicModel.Address" Role="Address" Multiplicity="1" />
+    <End Type="ClinicModel.PatientCard" Role="PatientCard" Multiplicity="*" />
+  </Association>
+  <EntityType Name="Surgery">
+    <Key>
+      <PropertyRef Name="SurgeryId" />
+    </Key>
+    <Property Name="SurgeryId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Number" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="DistrictSchedule" Relationship="ClinicModel.SurgeryDistrictSchedule" FromRole="Surgery" ToRole="DistrictSchedule" />
+  </EntityType>
+  <EntityType Name="DistrictSchedule">
+    <Key>
+      <PropertyRef Name="DistrictScheduleId" />
+    </Key>
+    <Property Name="DistrictScheduleId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SurgeryId" Type="Int32" Nullable="false" />
+    <Property Name="DoctorId" Type="Int32" Nullable="false" />
+    <Property Name="ReceiptDate" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="Surgery" Relationship="ClinicModel.SurgeryDistrictSchedule" FromRole="DistrictSchedule" ToRole="Surgery" />
+    <NavigationProperty Name="Doctor" Relationship="ClinicModel.DoctorDistrictSchedule" FromRole="DistrictSchedule" ToRole="Doctor" />
+  </EntityType>
+  <Association Name="SurgeryDistrictSchedule">
+    <End Type="ClinicModel.Surgery" Role="Surgery" Multiplicity="1" />
+    <End Type="ClinicModel.DistrictSchedule" Role="DistrictSchedule" Multiplicity="*" />
+  </Association>
+  <Association Name="DoctorDistrictSchedule">
+    <End Type="ClinicModel.Doctor" Role="Doctor" Multiplicity="1" />
+    <End Type="ClinicModel.DistrictSchedule" Role="DistrictSchedule" Multiplicity="*" />
+  </Association>
+  <EntityType Name="DoctorType">
+    <Key>
+      <PropertyRef Name="DoctorTypeId" />
+    </Key>
+    <Property Name="DoctorTypeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" />
+    <NavigationProperty Name="Doctor" Relationship="ClinicModel.DoctorTypeDoctor" FromRole="DoctorType" ToRole="Doctor" />
+  </EntityType>
+  <Association Name="DoctorTypeDoctor">
+    <End Type="ClinicModel.DoctorType" Role="DoctorType" Multiplicity="1" />
+    <End Type="ClinicModel.Doctor" Role="Doctor" Multiplicity="*" />
+  </Association>
+  <EntityType Name="SiteDoctors">
+    <Key>
+      <PropertyRef Name="SiteDoctorId" />
+    </Key>
+    <Property Name="SiteDoctorId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DoctorId" Type="Int32" Nullable="false" />
+    <Property Name="SiteId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Doctor" Relationship="ClinicModel.DoctorSiteDoctors" FromRole="SiteDoctors" ToRole="Doctor" />
+    <NavigationProperty Name="Site" Relationship="ClinicModel.SiteSiteDoctors" FromRole="SiteDoctors" ToRole="Site" />
+  </EntityType>
+  <Association Name="DoctorSiteDoctors">
+    <End Type="ClinicModel.Doctor" Role="Doctor" Multiplicity="1" />
+    <End Type="ClinicModel.SiteDoctors" Role="SiteDoctors" Multiplicity="*" />
+  </Association>
+  <Association Name="SiteSiteDoctors">
+    <End Type="ClinicModel.Site" Role="Site" Multiplicity="1" />
+    <End Type="ClinicModel.SiteDoctors" Role="SiteDoctors" Multiplicity="*" />
+  </Association>
+</Schema>

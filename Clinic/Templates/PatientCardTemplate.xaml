@@ -1,0 +1,131 @@
+﻿<UserControl x:Class="Clinic.Templates.PatientCardTemplate"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:materials="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:local="clr-namespace:Clinic.Templates"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <BitmapImage x:Key="Image" UriSource="../Images/patient_1.jpg"/>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.1*"/>
+            <RowDefinition Height="0.9*"/>
+        </Grid.RowDefinitions>
+        <materials:Card Background="{StaticResource red_light}">
+            <Border Padding="20">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.5*"/>
+                        <ColumnDefinition Width="0.5*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel VerticalAlignment="Center"
+                            Margin="20 0 20 0" Orientation="Vertical">
+                        <TextBlock Text="ФИО:"
+                               FontWeight="Medium"
+                               Foreground="White"
+                               FontSize="18"/>
+                        <TextBlock Foreground="White"
+                               FontSize="18"
+                               TextWrapping="WrapWithOverflow">
+                        <Run Text="{Binding Name, FallbackValue=Алёша}"/>
+                        <Run Text="{Binding Surname, FallbackValue=Попов}"/>
+                        <Run Text="{Binding Patrynum, FallbackValue=Сергеввич}"/>
+                        </TextBlock>
+                    </StackPanel>
+                    <StackPanel VerticalAlignment="Center"
+                            Grid.Column="1"
+                            Margin="20 0 20 0" Orientation="Horizontal">
+                        <TextBlock Text="Номер карты:"
+                               FontWeight="Medium"
+                               Foreground="White"
+                               FontSize="18"/>
+                        <TextBlock Foreground="White"
+                               FontSize="18"
+                               Margin="20 0 0 0"
+                               Text="{Binding Number, FallbackValue=12344321}"/>
+                    </StackPanel>
+                </Grid>
+            </Border>
+        </materials:Card>
+        <materials:Card Grid.Row="1">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.4*"/>
+                    <ColumnDefinition Width="0.6*"/>
+                </Grid.ColumnDefinitions>
+                <materials:Card>
+                    <Image Source="{Binding ImagePath, FallbackValue={StaticResource Image}}"
+                           Margin="20"/>
+                </materials:Card>
+                <materials:Card Grid.Column="1">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="0.8*"/>
+                            <RowDefinition Height="0.2*"/>
+                        </Grid.RowDefinitions>
+                        <StackPanel Orientation="Vertical">
+                            <StackPanel Orientation="Vertical" Margin="20 20 20 0">
+                                <TextBlock Text="Домашний адрес:"
+                                       FontWeight="Medium"
+                                       Foreground="Black"
+                                       FontSize="24"/>
+                                <TextBlock Text="{Binding Path=Address.Name, FallbackValue=Кирова_2}"
+                                       Foreground="Black"
+                                       FontSize="24"
+                                       TextWrapping="WrapWithOverflow"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="20 20 20 0">
+                                <TextBlock Text="Пол:"
+                                       FontWeight="Medium"
+                                       Foreground="Black"
+                                       FontSize="24"/>
+                                <TextBlock Text="{Binding Path=Sex.Name,
+                                                FallbackValue=Мужской}"
+                                       Foreground="Black"
+                                       FontSize="24"
+                                       Margin="20 0 0 0"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="20 20 20 0">
+                                <TextBlock Text="Возраст:"
+                                       FontWeight="Medium"
+                                       Foreground="Black"
+                                       FontSize="24"/>
+                                <TextBlock Foreground="Black"
+                                       FontSize="24"
+                                       Margin="20 0 0 0">
+                                <Run Text="{Binding Path=Age, FallbackValue=20}"/>
+                                <Run Text="лет"/>
+                                </TextBlock>
+                            </StackPanel>
+                            <StackPanel Visibility="{Binding HasPages}"
+                                        Orientation="Vertical" Margin="20 20 20 20">
+                                <TextBlock Text="Последнее заполнение:"
+                                       FontWeight="Medium"
+                                       Foreground="Black"
+                                       FontSize="24"/>
+                                <TextBlock 
+                                        Text="{Binding Path=LastReception,
+                                    FallbackValue=12.02.2000}"       
+                                        Foreground="Black"
+                                        FontSize="24"/>
+                            </StackPanel>
+                        </StackPanel>
+                        <Button Style="{StaticResource ActualButton}"
+                                Margin="20"
+                                Grid.Row="1"
+                                Command="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Page},
+                            Path=DataContext.OpenCardDialog, UpdateSourceTrigger=PropertyChanged}"
+                                Visibility="{Binding HasPages}"
+                                Content="Страницы"
+                                Padding="10"/>
+                    </Grid>
+                </materials:Card>
+            </Grid>
+        </materials:Card>
+    </Grid>
+</UserControl>
